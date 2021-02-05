@@ -1,0 +1,15 @@
+{
+  "name": "plasm-simple-transfer",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "milseg",
+  "license": "MIT",
+  "dependencies": {
+    "@plasm/types": "^1.4.0",
+    "@polkadot/api": "^3.7.3",
+    "dotenv": "^8.2.0"
+  },
+  "scripts": {
+    "start": "node index.js"
+  }
+}
