@@ -15,24 +15,24 @@ async function startChain() {
   console.log("trying connection to ", process.env.RPC_URL)
   const targetAddress = process.env.TARGET_ADDRESS
   const provider = new WsProvider(process.env.RPC_URL)
-  const types = Object.values(plasmDefinitions).reduce(
+  /*const types = Object.values(plasmDefinitions).reduce(
       (res, { types }) => ({ ...res, ...types }),
       {},
-  )
+  )*/
 
   /*fs.appendFile('generated-types.js', JSON.stringify(types), 'utf-8', (err) => {
     if (err) throw err;
     console.log('The "types" were appended to file!');
   });*/
 
-  const api = new ApiPromise({
+  /*const api = new ApiPromise({
       provider,
       types
-  });
-  /*const api = await ApiPromise.create({
+  });*/
+  const api = await ApiPromise.create({
 	  provider: provider,
 	  types: jsonDefinitions
-  });*/
+  });
 
   api.on('connected', () => console.log(`Connected to ${process.env.RPC_URL}`));
   api.on('disconnected', () => console.log(`Disconnected from ${process.env.RPC_URL}`));

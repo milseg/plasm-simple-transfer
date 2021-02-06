@@ -147,8 +147,8 @@ module.exports = {
     "stateUpdate": "StateUpdate",
     "checkpoint": "Checkpoint"
   },
-  "Address": "AccountId",
-  "LookupSource": "AccountId",
+  "Address": "IndicesLookupSource",
+  "LookupSource": "IndicesLookupSource",
   "Account": {
     "nonce": "U256",
     "balance": "U256"
